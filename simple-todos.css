@@ -1,0 +1,75 @@
+/* Font Awesome */
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+/* CSS declarations go here */
+
+BODY {
+	margin: 0;
+	padding: 0;
+	color: #999;
+}
+
+HTML, BODY {
+	height: 100%;
+	background-color: #CCC;
+}
+
+#page-view {
+	/*padding-bottom: 50px;*/
+}
+/*#page-view, 
+#main-container { height: 100%;}*/
+
+#site-header {
+	position: fixed;
+	left: 0; top: 0;
+	width: 100%; 
+	z-index: 100;
+}
+#site-header .container-fluid {
+	height: 60px;
+	background-color: rgba(255,255,255,0.9);
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+	box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+#site-header h1{
+	margin: 16px 0 0 0;
+	font-size: 24px;
+	text-align: center;
+}
+#main-container {margin-top: 60px;}
+
+.container {
+	/*height: 100%;*/
+	padding-bottom: 5px;
+}
+.task-list {
+	list-style: none;
+	padding: 0;
+	border: 1px #EEE solid;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.list-item {
+	background-color: white;
+	padding: 10px;
+}
+.list-item:hover {
+	/*background-color: #F2F2F2;*/
+}
+.list-item:first-child {
+	border-radius: 5px 5px 0 0;
+}
+.list-item:last-child {
+	border-radius: 0 0 5px 5px;
+}
+.list-item + .list-item {
+	border-top: 1px #EEE solid;
+}
+
+/*.list-item.checked {opacity: 0.7;}*/
+.list-item .icon {margin: 0 5px;}
+.list-item.checked .text {text-decoration: line-through;}
+.list-item .delete {float: right;}
+.list-item .text {display: inline-block;}

@@ -1,0 +1,79 @@
+<head>
+<meta charset="UTF-8">
+<title>simple-todos</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+</head>
+<body>
+<div id="page-view">
+<!--Page View Starts-->
+
+<header id="site-header">
+	<div class="container-fluid">
+		<h1>To Do List - WebApp</h1>
+	</div>
+</header>
+
+
+<!--Main Container Starts-->
+<div id="main-container">
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="title">Insert Form</h2> 
+				{{> newTaskForm}}
+			</div>
+		</div>
+
+		<div class="row">	
+			<div class="col-md-12">
+				<h2 class="title">Tasks</h2> 
+				<ul class="task-list clearfix">
+				{{#each tasks}}
+					{{> listItem}}
+				{{/each}}
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!--Main Container Ends-->
+
+
+<!--Page View Ends-->
+</div>
+</body>
+
+
+<template name="listItem">
+<li class="list-item {{#if checked}}checked{{/if}}">
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked">
+    <span class="text"><i class="icon fa fa-list-alt"></i> {{text}}</span>
+    <button class="btn btn-danger btn-xs delete">&times;</button>
+</li>
+</template>
+
+
+<template name="newTaskForm">
+<form id="new-task">
+	<div class="form-group">
+		<input class="form-control" type="type" name="task" id="task" placeholder="Add a task">
+	</div>
+</form>
+</template>
+
+
+
+
+
+
+
+
+
+
