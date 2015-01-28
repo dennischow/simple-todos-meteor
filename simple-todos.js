@@ -1,5 +1,5 @@
 Tasks = new Mongo.Collection("tasks");
-console.log( Tasks ); 
+// console.log( Tasks ); 
 
 if (Meteor.isClient) {
   // counter starts at 0
@@ -30,21 +30,22 @@ if (Meteor.isClient) {
     "submit #new-task": function(event){
 
       // This function is called when the new task form is submitted
+      event.preventDefault(); // Applied this made better UX
 
       // Select IDs
-      var field_task = document.getElementById("task");
+      var taskField = document.getElementById("task");
 
       // Values
-      var tast_text = field_task.value;
+      var taskField_text = taskField.value;
 
       // Store to Database
       Tasks.insert({
-        text: tast_text,
+        text: taskField_text,
         createdAt: new Date() // current time
       });
 
       // Clear form
-      field_text.value = "";
+      taskField.value = "";
 
       // Prevent default form submit
       return false;
