@@ -16,6 +16,9 @@ HTML, BODY {
 
 #page-view {
 	/*padding-bottom: 50px;*/
+	overflow: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch; 
 }
 /*#page-view, 
 #main-container { height: 100%;}*/
@@ -69,7 +72,7 @@ HTML, BODY {
 }
 
 /*.list-item.checked {opacity: 0.7;}*/
-.list-item .icon {margin: 0 5px;}
+.list-item .icon {margin: 0 10px;}
 .list-item.checked .text {text-decoration: line-through;}
 .list-item .delete {float: right;}
 .list-item .text {display: inline-block;}
