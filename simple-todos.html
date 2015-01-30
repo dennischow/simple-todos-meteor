@@ -6,6 +6,8 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<base href="/">
 </head>
 <body>
 <div id="page-view">
@@ -13,8 +15,22 @@
 
 <header id="site-header">
 	<div class="container-fluid">
-		<h1>To Do List - WebApp</h1>
+
+		<div class="col-md-6 col-sm-6">
+			<h1>To Do List - WebApp</h1>
+		</div>
+
+		<div class="data-control col-md-6 col-sm-6">
+			<!-- add the checkbox to <body> right below the h1 -->
+			<div class="checkbox">
+				<label class="hide-completed">
+					<input type="checkbox" checked="{{hideCompleted}}" > Hide Completed Tasks
+				</label>
+			</div>
+		</div>
+	
 	</div>
+
 </header>
 
 
@@ -22,6 +38,27 @@
 <div id="main-container">
 
 	<div class="container">
+
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-xs-4">
+				<div class="task-meter">
+					<p class="task-meter-title">Complated</p>
+					<p class="task-meter-count"><small>{{ completedCount }}</small></p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-4">
+				<div class="task-meter">
+					<p class="task-meter-title">Incomplete</p>
+					<p class="task-meter-count"><small>{{incompleteCount}}</small></p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-4">
+				<div class="task-meter">
+					<p class="task-meter-title">Total Task</p>
+					<p class="task-meter-count"><small>{{ totalCount }}</small></p>
+				</div>
+			</div>
+		</div>
 
 		<div class="row">
 			<div class="col-md-12">
